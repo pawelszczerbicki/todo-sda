@@ -15,9 +15,9 @@ public class ModifyingTransaction {
                 con.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
 
                 con.createStatement().executeUpdate("insert into users(login, password) values ('xxxxx', 'test')");
-                con.createStatement().executeUpdate("update users set login = 'isolation' where 1=1");
+                con.createStatement().executeUpdate("update users set login = 'new login'");
 
-                con.commit();
+                con.rollback();
         }
     }
 }
