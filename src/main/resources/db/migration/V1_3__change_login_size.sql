@@ -1,0 +1,1 @@
+alter table users alter column login type varchar(2048);
