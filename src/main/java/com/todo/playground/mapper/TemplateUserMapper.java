@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 public class TemplateUserMapper implements RowMapper<User> {
 
-    public static final int ID = 1;
-    public static final int LOGIN = 2;
-    public static final int PASSWORD = 3;
+    public static final String ID = "id";
+    public static final String LOGIN = "login";
+    public static final String PASSWORD = "password";
 
     @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {

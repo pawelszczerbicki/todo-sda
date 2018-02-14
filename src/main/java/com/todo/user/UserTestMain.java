@@ -1,6 +1,6 @@
 package com.todo.user;
 
-import com.todo.config.DatasourceConfig;
+import com.todo.config.DbConfig;
 import org.flywaydb.core.Flyway;
 
 import javax.sql.DataSource;
@@ -16,14 +16,19 @@ public class UserTestMain {
     public static void main(String[] args) throws SQLException {
         //TODO change to builder pattern
 
-        DataSource ds = new DatasourceConfig().dataSource(URL, LOGIN, PASSWORD);
+        //Remember - do not edit flyway files
+        DataSource ds = DbConfig.dataSource(URL, LOGIN, PASSWORD);
         Flyway flyway = new Flyway();
         flyway.setDataSource(ds);
         flyway.migrate();
 
 
         //Fail migration
-        
+        System.out.println("Using DataSource directly");
         System.out.println(new UserDao(ds).getByLogin("John"));
+
+        System.out.println("Using JDBC Template");
+        System.out.println(new UserJdbcTmplDao(DbConfig.jdbcTemplate(URL, LOGIN, PASSWORD))
+                .getByLogin("John"));
     }
 }
