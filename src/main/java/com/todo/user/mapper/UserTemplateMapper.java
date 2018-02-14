@@ -1,5 +1,6 @@
-package com.todo.user;
+package com.todo.user.mapper;
 
+import com.todo.user.User;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

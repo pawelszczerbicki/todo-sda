@@ -1,5 +1,6 @@
 package com.todo.user;
 
+import com.todo.user.mapper.UserTemplateMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
