@@ -1,4 +1,4 @@
-package com.todo.isolation;
+package com.todo.playground.isolation;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,12 +1,14 @@
-package com.todo.user;
+package com.todo;
 
 import com.todo.config.DbConfig;
+import com.todo.user.UserDao;
+import com.todo.user.UserJdbcTmplDao;
 import org.flywaydb.core.Flyway;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-public class UserTestMain {
+public class DbTestMain {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/todo";
     private static final String LOGIN = "postgres";

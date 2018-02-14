@@ -23,7 +23,7 @@ public class UserJdbcTmplDao {
     }
 
     public List<User> find() {
-        return tmpl.query(FIND_ALL, new UserTmplMapper());
+        return tmpl.query(FIND_ALL, new UserTemplateMapper());
     }
 
     public void save(String login, String password) {
