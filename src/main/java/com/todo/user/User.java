@@ -1,9 +1,12 @@
 package com.todo.user;
 
+import java.time.LocalDateTime;
+
 public class User {
     private long id;
     private String login;
     private String password;
+    private LocalDateTime createdAt;
 
     public User() {
     }
@@ -32,6 +35,7 @@ public class User {
                 "id=" + id +
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
+                ", createdAt=" + createdAt +
                 '}';
     }
 }

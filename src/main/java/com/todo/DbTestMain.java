@@ -32,5 +32,10 @@ public class DbTestMain {
         System.out.println("Using JDBC Template");
         System.out.println(new UserJdbcTmplDao(DbConfig.jdbcTemplate(URL, LOGIN, PASSWORD))
                 .getByLogin("John"));
+
+//        System.out.println("\n using jooq");
+//        new UserJooqDao(DbConfig.jooq(URL, LOGIN, PASSWORD))
+//                .find()
+//                .forEach(System.out::println);
     }
 }
