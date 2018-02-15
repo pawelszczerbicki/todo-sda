@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="users">
+        <return-scalar column="id" type="long"/>
+        <return-scalar column="login" type="string"/>
+        <![CDATA[
+           SELECT id, login from users where id > :id
+        ]]>
+    </sql-query>
+</hibernate-mapping>
